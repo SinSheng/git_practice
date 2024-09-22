@@ -1,10 +1,10 @@
 ## 說明 blob, tree, commit, branch, head 分別是什麼
 - blob
-    - git的物件種類之一，每當==git add==檔案的時候，就會產生一個blob物件。這個物件會紀錄檔案的內容，但不會紀錄檔名！
-    - 每當執行==git add==指令，.git/objects/ 裡就會多一個資料夾
+    - git的物件種類之一，每當`git add`檔案的時候，就會產生一個blob物件。這個物件會紀錄檔案的內容，但不會紀錄檔名！
+    - 每當執行`git add`指令，.git/objects/ 裡就會多一個資料夾
     - ex: 
-        - $git cat-file -t <sha-1 value>  #顯示該sha1 value是屬於那一種物件
-        - $git cat-file -p <sha-1 value>  #顯示該sha1 value物件的內容
+        - `$git cat-file -t <sha-1 value>`  #顯示該sha1 value是屬於那一種物件
+        - `$git cat-file -p <sha-1 value>`  #顯示該sha1 value物件的內容
 - tree
     - git的物件種類之一，藉由tree object，我們可以儲存資料的結構以及檔名。
     - 每當commit一遍，便會新增一個tree object 裡面儲存了blob object 及檔名等資訊
@@ -21,8 +21,8 @@
         - git checkout [分支名稱] #切換分支
         - git branch -d [分支名稱] #刪除分支
 - head
-    - ==HEAD== 是一個指標，指向某一個分支，通常可以把 ==HEAD== 當做「目前所在分支」看待。在 .git 目錄裡有一個檔名為 HEAD 的檔案，就是記錄著 HEAD 的內容。 
-    - ==HEAD== 通常會指向目前所在的分支。不過 HEAD 也不一定總是會指向某個分支，當 ==HEAD== 沒有指向某個分支的時候便會造成「detached HEAD」的狀態
+    - `HEAD` 是一個指標，指向某一個分支，通常可以把 `HEAD` 當做「目前所在分支」看待。在 .git 目錄裡有一個檔名為 HEAD 的檔案，就是記錄著 HEAD 的內容。 
+    - `HEAD` 通常會指向目前所在的分支。不過 HEAD 也不一定總是會指向某個分支，當 `HEAD` 沒有指向某個分支的時候便會造成「detached HEAD」的狀態
 
 ## 紀錄在 git repo 操作過程中，.git 檔案夾裡的變化，看看你可以觀察到什麼
 - git add readme.md
