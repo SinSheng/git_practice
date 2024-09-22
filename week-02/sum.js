@@ -11,4 +11,4 @@ function sum(ary) {
 }
 
 console.log(sum([1, 5, 3, 2])); // 11
-console.log(sum(5)); // 11
+console.log(sum(5)); // 15
