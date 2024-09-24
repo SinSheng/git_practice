@@ -17,6 +17,7 @@ export default class Stack {
 
     // 移除並回傳 stack 頂部的元素
     pop() {
+        // exception : check if stack has value or not
         if(this.isEmpty()){
             return "error! stack is empty";
         }
